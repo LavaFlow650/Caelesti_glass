@@ -18,3 +18,5 @@ then run main.py (you might need to change REF_IMAGE to mach the name of your re
 then you will find all the images you need in folders in texture_export
 
 if you wanna see the script working, you should be able to delete the contents (the folders light_green and red) of texture_export and then run main.py and they should reappear
+
+ignore any spelling mistakes i kinda rushed this and have not been sleeping
