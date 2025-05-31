@@ -4,7 +4,7 @@ before you start, make sure you have python installed (version 3)
 make sure you also get the png package by running "pip install pypng"
 
 then you will have to finish adding all of you custom colors into the colors folder
--i tried to copy your light_green and red texturs from ur vid but yt compression kinda messes with the exact color so you should redo them
+-i tried to copy your light_green and red textures from ur vid but yt compression kinda messes with the exact color so you should redo them
 -i also dont think that I got the opacity right
 
 -the colors are stored in a list as hex RGBA values
