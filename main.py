@@ -2,11 +2,15 @@ import copy
 import png
 import os
 
+# this assumes that ur texture pack is 16x16
 BLOCK_DIMENTIONS = 16
 
+#this is where you can define all the different minecraft colors (i tried to copy your red and light green colors but you should re do them because yt compression is not the best)(also idk if i got the opasity right)(they are in hex rgba format)
 COLORS_PATH = 'colors'
+#this is the path to the image that you want to modify
 REF_IMAGE = 'ref_images/ref_image.png'
-# REF_IMAGE = 'output.png'
+#this is the path to the file wich labels the colors used in the original image
+#make sure that all the files have the colors in the same order
 REF_KEY_PATH = 'list of ref colors.txt'
 
 def get_color_map(filepath):
@@ -68,11 +72,11 @@ def main():
             os.mkdir('texture_export/{}'.format(filename[:-4]))
         except FileExistsError:
             pass
-        print(pixels_list)
         recolored = recolor_list(copy.deepcopy(pixels_list),'{}/{}'.format(COLORS_PATH,filename))
         for h in range(int(height/BLOCK_DIMENTIONS)):
             for w in range(int(width/BLOCK_DIMENTIONS)):
                 export_icon(w*BLOCK_DIMENTIONS,h*BLOCK_DIMENTIONS,h*int(width/BLOCK_DIMENTIONS)+w,recolored,'{}'.format(filename[:-4]))
+    
     # export_icon(16*2,16,0,recolored,'testing')
     
     # writer = png.Writer(width=width, height=height, bitdepth=8, greyscale=False, alpha=True)
